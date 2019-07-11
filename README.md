@@ -4,7 +4,6 @@
 
 # SENT
 <b>http://<your-directory>/disbursement/send </b> (send a disbursement data)
-
 <hr>
 
 # CHECK
