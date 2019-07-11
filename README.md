@@ -3,12 +3,12 @@
 
 
 # SENT
-<b>http://localhost/flip/mini-project/disbursement/send </b> (send a disbursement data)
+<b>http://<your-directory>/disbursement/send </b> (send a disbursement data)
 
 <hr>
 
 # CHECK
-<b>http://localhost/flip/mini-project/disbursement/check/?id={id}</b> (check disbursement status)
+<b>http://<your-directory>/disbursement/check/?id={id}</b> (check disbursement status)
 <hr>
 
 TESTING
