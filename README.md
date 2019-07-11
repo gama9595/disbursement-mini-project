@@ -9,5 +9,3 @@
 # CHECK
 <b>http://<your-directory>/disbursement/check/?id={id}</b> (check disbursement status)
 <hr>
-
-TESTING
