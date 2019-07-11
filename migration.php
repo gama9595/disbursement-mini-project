@@ -160,17 +160,6 @@ class MigrateDatabase
 	}
 }
 
-//check the Config File For Database credentials
-/*
-$configFile = require __DIR__ . '/api/app/settings.php';
-$servername = $configFile['settings']['doctrine']['connection']['host'];
-$username = $configFile['settings']['doctrine']['connection']['user'];
-$password = $configFile['settings']['doctrine']['connection']['password'];
-$dbname = $configFile['settings']['doctrine']['connection']['dbname'];
-$sqlFolder = __DIR__ . '/sql';
-$migrateObject = new MigrateDatabase($servername, $username, $password, $dbname);
-$migrateObject->migrate($sqlFolder);*/
-
 $servername = "localhost";
 $username = "root";
 $password = "";
