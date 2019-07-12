@@ -160,10 +160,16 @@ class MigrateDatabase
 	}
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "flip";
+include_once 'config/db.php';
+
+$db = new dbconnection();
+
+$db_cfg = $db->cfg();
+
+$servername = $db_cfg['servername'];
+$username = $db_cfg['user'];
+$password = $db_cfg['pass'];
+$dbname = $db_cfg['dbname'];
 $sqlFolder = __DIR__ . '/sql';
 $migrateObject = new MigrateDatabase($servername, $username, $password, $dbname);
 $migrateObject->migrate($sqlFolder);
