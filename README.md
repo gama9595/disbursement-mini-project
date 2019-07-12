@@ -4,7 +4,7 @@ DISBURSEMENT MINI SERVICE WITH SLIGHTLY-BIG FLIP
 Projek ini bertujuan untuk membuat suatu layanan yang dapat mempermudah kegiatan pengucuran uang. Berikut adalah hal yang dapat dilakukan oleh layanan ini:
 
 * mengirim data pencairan ke API pihak ke-3 (Slightly-big Flip)
-* menyimpan data secara rinci mengenai pencairan dari pihak ke-3, ke sebuah basis data
+* menyimpan data secara rinci mengenai pencairan dari pihak ke-3, ke dalam database
 * memeriksa status pencairan berdasarkan id transaksi, dan memperbaharui informasi pada basis data berdasarkan respon yang diterima
 
 ## Teknologi, Framework, Tools, Platform ##
