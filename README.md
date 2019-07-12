@@ -11,7 +11,7 @@ Projek ini bertujuan untuk membuat suatu layanan yang dapat mempermudah kegiatan
 
 Untuk bisa menjalankan layanan ini, ada beberapa software yang harus dipasang, diantaranya:
 
-* XAMPP / LAMPP 7.0.9
+* XAMPP / LAMP 7.0.9
 * Web Browser (Chrome, Firefox, atau yang lainnya)
 * Postman 7.2.2 
 
@@ -32,7 +32,7 @@ Untuk melakukan migrasi database, lakukan hal berikut:
 
 ## Testing Layanan dengan Postman ##
 
-* untuk mengirim data pencairan, masukkan alamat url: [http://alamat-localhost/nama-folder-projek/disbursement/send](http://alamat-localhost/nama-folder-projek/disbursement/send) dengan metode POST, dan atribut yang di-isi yaitu: `bank_code, account_number, amount, remark`. 
+* untuk mengirim data pencairan, masukkan alamat url: `http://alamat-localhost/nama-folder-projek/disbursement/send` dengan metode POST, dan atribut yang di-isi yaitu: `bank_code, account_number, amount, remark`. 
 
 ![Kirim Data](ss/test1.png)
 
@@ -47,7 +47,7 @@ Untuk melakukan migrasi database, lakukan hal berikut:
 ![Berhasil Tersimpan](ss/test3.png)
 
 
-* untuk mengecek status transaksi, masukkan alamat url: [http://alamat-localhost/nama-folder-projek/disbursement/check/?id=id_transaksi](http://alamat-localhost/nama-folder-projek/disbursement/check/?id=id_transaksi) dengan metode GET, dan parameter yang dipakai adalah `id` dari transaksi yang ada. (contoh: "1093780195").
+* untuk mengecek status transaksi, masukkan alamat url: `http://alamat-localhost/nama-folder-projek/disbursement/check/?id=id_transaksi` dengan metode GET, dan parameter yang dipakai adalah `id` dari transaksi yang ada. (contoh: "1093780195").
 
 ![Cek Status](ss/test4.png)
 
