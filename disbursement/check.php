@@ -12,8 +12,6 @@ $db = $database->connect();
 
 $disburse = new Disburse($db);
 
-
-
 //CHECK THE DISBURSEMENT STATUS BASED ID TRANSACTION
 $id = $_GET['id'];
 
@@ -30,8 +28,6 @@ $curl_response = curl_exec($curl);
 $response = json_decode($curl_response, true);
 
 curl_close($curl);
-
-
 
 // UPDATE THE INFORMATION FROM DISBURSEMENT STATUS ENDPOINT TO DATABASE BASED TRANSACTION ID
 $disburse->id                   = $id;

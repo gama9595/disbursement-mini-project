@@ -12,8 +12,6 @@ $db = $database->connect();
 
 $disburse = new Disburse($db);
 
-
-
 //SEND THE DISBURSEMENT INFORMATION TO SLIGHTLY-BIG FLIP API SERVICES
 $curl = curl_init($base_url);
 
@@ -35,8 +33,6 @@ $curl_response = curl_exec($curl);
 $response = json_decode($curl_response, true);
 
 curl_close($curl);
-
-
 
 //SAVE THE DISBURSEMENT INFORMATION FROM API RESPONSE TO DATABASE
 $disburse->id                   = $response['id'];
