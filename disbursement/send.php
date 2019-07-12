@@ -16,10 +16,10 @@ $disburse = new Disburse($db);
 //SEND THE DISBURSEMENT INFORMATION TO SLIGHTLY-BIG FLIP API SERVICES
 $curl = curl_init($base_url);
 
-$bank_code = $_POST['bank_code'];
-$account_number = $_POST['account_number'];
-$amount = $_POST['amount'];
-$remark = $_POST['remark'];
+$bank_code          = $_POST['bank_code'];
+$account_number     = $_POST['account_number'];
+$amount             = $_POST['amount'];
+$remark             = $_POST['remark'];
 
 curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 curl_setopt($curl, CURLOPT_USERPWD, $secret_key);
