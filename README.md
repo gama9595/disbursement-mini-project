@@ -33,21 +33,32 @@ Untuk melakukan migrasi database, lakukan hal berikut:
 ## Testing Layanan dengan Postman ##
 
 * untuk mengirim data pencairan, masukkan alamat url: [http://alamat-localhost/nama-folder-projek/disbursement/send](http://alamat-localhost/nama-folder-projek/disbursement/send) dengan metode POST, dan atribut yang di-isi yaitu: `bank_code, account_number, amount, remark`. 
+
 ![Kirim Data](ss/test1.png)
 
+
 * berikut respon yang didapat setelah sukses mengirim data, sekaligus menyimpan rincian data transaksi berdasarkan hasil respon dari API pihak ke-3 ke dalam database.
+
 ![Respon Berhasil](ss/test2.png)
 
+
 * data transaksi berhasil tersimpan ke database.
+
 ![Berhasil Tersimpan](ss/test3.png)
 
+
 * untuk mengecek status transaksi, masukkan alamat url: [http://alamat-localhost/nama-folder-projek/disbursement/check/?id=id_transaksi](http://alamat-localhost/nama-folder-projek/disbursement/check/?id=id_transaksi) dengan metode GET, dan parameter yang dipakai adalah `id` dari transaksi yang ada. (contoh: "1093780195").
+
 ![Cek Status](ss/test4.png)
 
+
 * berikut respon yang didapat setelah sukses mengecek status data, sekaligus menyimpan hasil respon ke dalam database.
+
 ![Respon Berhasil](ss/test5.png)
 
+
 * data transaksi berhasil diperbaharui ke database.
+
 ![Berhasil Diperbaharui](ss/test6.png)
 
 
