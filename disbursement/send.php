@@ -22,7 +22,7 @@ $amount = $_POST['amount'];
 $remark = $_POST['remark'];
 
 curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-//curl_setopt($curl, CURLOPT_USERPWD, $secret_key);
+curl_setopt($curl, CURLOPT_USERPWD, $secret_key);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/x-www-form-urlencoded'));
 curl_setopt($curl, CURLOPT_POST, true);

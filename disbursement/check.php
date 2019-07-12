@@ -17,7 +17,6 @@ $disburse = new Disburse($db);
 $id = $_GET['id'];
 
 $curl = curl_init($base_url . '/' . $id);
-
 curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 curl_setopt($curl, CURLOPT_USERPWD, $secret_key);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
