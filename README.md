@@ -11,7 +11,7 @@ Projek ini bertujuan untuk membuat suatu layanan yang dapat mempermudah kegiatan
 
 Untuk bisa menjalankan layanan ini, ada beberapa software yang harus dipasang, diantaranya:
 
-* XAMPP / LAMPP 7.0.9
+* XAMPP / LAMP 7.0.9
 * Web Browser (Chrome, Firefox, atau yang lainnya)
 * Postman 7.2.2 
 
