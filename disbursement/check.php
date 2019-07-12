@@ -12,6 +12,8 @@ $db = $database->connect();
 
 $disburse = new Disburse($db);
 
+
+//CHECK THE DISBURSEMENT STATUS BASED ID TRANSACTION
 $id = $_GET['id'];
 
 $curl = curl_init($base_url . '/' . $id);
@@ -29,6 +31,7 @@ $response = json_decode($curl_response, true);
 curl_close($curl);
 
 
+// UPDATE THE INFORMATION FROM DISBURSEMENT STATUS ENDPOINT TO DATABASE BASED TRANSACTION ID
 $disburse->id                   = $id;
 $disburse->status               = $response['status'];
 $disburse->receipt              = $response['receipt'];
@@ -36,10 +39,10 @@ $disburse->time_served          = $response['time_served'];
 
 if ($disburse->check_disbursement()) {
     echo json_encode(
-        array("status" => "200", "message" => "SUCCESSFULLY CHECK & UPDATE DISBURSEMENT DATA.")
+        array("status" => "200", "message" => "SUKSES MEMPERBAHARUI STATUS DAN MENYIMPAN DATA TRANSAKSI.", "data" => $response)
     );
 } else {
     echo json_encode(
-        array("status" => "404", "message" => "OOPS, AN ERROR OCCURRED WITH THE SYSTEM.")
+        array("status" => "404", "message" => "OOPS, TELAH TERJADI KESALAHAN PADA SISTEM.")
     );
 }

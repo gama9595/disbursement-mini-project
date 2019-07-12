@@ -12,6 +12,8 @@ $db = $database->connect();
 
 $disburse = new Disburse($db);
 
+
+//SEND THE DISBURSEMENT INFORMATION TO SLIGHTLY-BIG FLIP API SERVICES
 $curl = curl_init($base_url);
 
 $bank_code = $_POST['bank_code'];
@@ -34,6 +36,7 @@ $response = json_decode($curl_response, true);
 curl_close($curl);
 
 
+//SAVE THE DISBURSEMENT INFORMATION FROM API RESPONSE TO DATABASE
 $disburse->id                   = $response['id'];
 $disburse->amount               = $response['amount'];
 $disburse->status               = $response['status'];
@@ -48,10 +51,10 @@ $disburse->fee                  = $response['fee'];
 
 if ($disburse->send_disbursement()) {
     echo json_encode(
-        array("status" => "200", "message" => "SUCCESSFULLY SENT DISBURSEMENT DATA.")
+        array("status" => "200", "message" => "SUKSES MENGIRIM DAN MENYIMPAN DATA PENCAIRAN.", "data" => $response)
     );
 } else {
     echo json_encode(
-        array("status" => "404", "message" => "OOPS, AN ERROR OCCURRED WITH THE SYSTEM.")
+        array("status" => "404", "message" => "OOPS, TELAH TERJADI KESALAHAN PADA SISTEM.")
     );
 }
