@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
@@ -21,7 +22,7 @@ $amount = $_POST['amount'];
 $remark = $_POST['remark'];
 
 curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-curl_setopt($curl, CURLOPT_USERPWD, $secret_key);
+//curl_setopt($curl, CURLOPT_USERPWD, $secret_key);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/x-www-form-urlencoded'));
 curl_setopt($curl, CURLOPT_POST, true);
@@ -47,9 +48,11 @@ $disburse->receipt              = $response['receipt'];
 $disburse->time_served          = $response['time_served'];
 $disburse->fee                  = $response['fee'];
 
-if ($disburse->send_disbursement()) {
+if ($response['status'] == '401') {
+    echo json_encode($response);
+} else if ($disburse->send_disbursement()) {
     echo json_encode(
-        array("status" => "200", "message" => "SUKSES MENGIRIM DAN MENYIMPAN DATA PENCAIRAN.", "data" => $response)
+        array("status" => "200", "message" => "SUKSES MEMPERBAHARUI STATUS DAN MENYIMPAN DATA TRANSAKSI.", "data" => $response)
     );
 } else {
     echo json_encode(

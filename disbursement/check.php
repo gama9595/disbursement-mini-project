@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
@@ -35,7 +36,9 @@ $disburse->status               = $response['status'];
 $disburse->receipt              = $response['receipt'];
 $disburse->time_served          = $response['time_served'];
 
-if ($disburse->check_disbursement()) {
+if ($response['status'] == '401') {
+    echo json_encode($response);
+} else if ($disburse->check_disbursement()) {
     echo json_encode(
         array("status" => "200", "message" => "SUKSES MEMPERBAHARUI STATUS DAN MENYIMPAN DATA TRANSAKSI.", "data" => $response)
     );
