@@ -1,11 +1,5 @@
-DISBURSEMENT MINI SERVICE WITH SLIGHTLY-BIG FLIP
+DISBURSEMENT MINI PROJECT
 ================
-
-Projek ini bertujuan untuk membuat suatu layanan yang dapat mempermudah kegiatan pengucuran uang. Berikut adalah hal yang dapat dilakukan oleh layanan ini:
-
-* mengirim data pencairan ke API pihak ke-3 (Slightly-big Flip)
-* menyimpan data secara rinci mengenai pencairan dari pihak ke-3, ke dalam database
-* memeriksa status pencairan berdasarkan id transaksi, dan memperbaharui informasi pada basis data berdasarkan respon yang diterima
 
 ## Teknologi, Framework, Tools, Platform ##
 
@@ -15,7 +9,7 @@ Untuk bisa menjalankan layanan ini, ada beberapa software yang harus dipasang, d
 * Web Browser (Chrome, Firefox, atau yang lainnya)
 * Postman 7.2.2 
 
-## Cara Menjalankan Aplikasi ##
+## Cara Menjalankan Layanan ##
 
 Untuk mengetes layanan ini, bisa langsung [mengunduh kode program dalam format zip](https://github.com/gama9595/disbursement-mini-project/archive/master.zip) atau melakukan `git clone`.
 
