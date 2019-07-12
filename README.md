@@ -32,7 +32,7 @@ Untuk melakukan migrasi database, lakukan hal berikut:
 
 ## Testing Layanan dengan Postman ##
 
-* untuk mengirim data pencairan, masukkan alamat url: [http://alamat-localhost/nama-folder-projek/disbursement/send](http://alamat-localhost/nama-folder-projek/disbursement/send) dengan metode POST, dan atribut yang di-isi yaitu: `bank_code, account_number, amount, remark`. 
+* untuk mengirim data pencairan, masukkan alamat url: `[http://alamat-localhost/nama-folder-projek/disbursement/send](http://alamat-localhost/nama-folder-projek/disbursement/send)` dengan metode POST, dan atribut yang di-isi yaitu: `bank_code, account_number, amount, remark`. 
 
 ![Kirim Data](ss/test1.png)
 
